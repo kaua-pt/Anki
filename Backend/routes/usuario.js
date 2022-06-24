@@ -1,6 +1,5 @@
 const express = require("express")
 const mongoose = require("mongoose")
-const app = express()
 const router = express.Router()
 require("../models/Usuario")
 const User = mongoose.model("Usuario")
@@ -12,6 +11,7 @@ router.get("/Registro", (req, res) => {
 })
 
 router.post("/Registro", (req, res) => {
+
     User.findOne({ email: req.body.email }).then((userFound) => {
         if (userFound) {
             res.send({ msg: "Email já cadastrado" })
@@ -42,7 +42,7 @@ router.post("/Login", (req, res) => {
         if (emailFound) {
             bcrypt.compare(req.body.senha, emailFound.senha, (err, result) => {
                 if (result == true) {
-                    res.send({ user: emailEncontrado })
+                    res.send("Logado")
 
                 } else {
                     res.send("Senha Incorreta")

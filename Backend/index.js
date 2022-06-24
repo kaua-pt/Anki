@@ -4,7 +4,6 @@ const session = require("express-session")
 const mongoose = require("mongoose")
 const app = express()
 const rotasBase = require("./routes/index")
-require("./models/Usuario")
 const PORT = 8888
 
 app.use(session({
@@ -14,7 +13,7 @@ app.use(session({
 }))
 
 mongoose.Promise = global.Promise
-mongoose.connect("mongodb://localhost/WegoJIM")
+mongoose.connect("mongodb://localhost/Anki")
 
 app.use(express.json())
 app.use(cors())
