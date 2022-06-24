@@ -3,7 +3,7 @@ const cors = require("cors")
 const session = require("express-session")
 const mongoose = require("mongoose")
 const app = express()
-const rotasUser = require("./routes/index")
+const rotasBase = require("./routes/index")
 require("./models/Usuario")
 const PORT = 8888
 
@@ -19,6 +19,10 @@ mongoose.connect("mongodb://localhost/WegoJIM")
 app.use(express.json())
 app.use(cors())
 
-app.use("/", rotasUser)
+app.get("/", (req, res) => {
+    res.send("dale")
+})
+
+app.use("/Anki", rotasBase)
 
 app.listen(PORT, () => { console.log("Servidor aberto na porta 8888") })
