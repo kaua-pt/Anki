@@ -1,12 +1,9 @@
 const express = require("express")
 const mongoose = require("mongoose")
-require("../models/Questao")
-require("../models/Tipo")
-const Tipo = mongoose.model("tipo")
-const Questao = mongoose.model("questao")
 const router = express.Router()
+const controllerQuestoes = require("../controllers/questoes")
 
-router.post("/cadastrarQuestao", (req, res) => {
-})
+router.post("/cadastrarQuestao", controllerQuestoes.cadastro)
+router.delete("/excluirQuestao", controllerQuestoes.deletar)
 
 module.exports = router

@@ -11,8 +11,8 @@ const questao = new Schema({
         require: true,
     },
     tipo: {
-        type: Schema.Types.ObjectId,
-        ref: "tipo",
+        type: String,
+        //ref: "tipo",
         require: true
     },
     dificuldade: {

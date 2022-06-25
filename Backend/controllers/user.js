@@ -1,6 +1,5 @@
 const express = require("express")
 const mongoose = require("mongoose")
-const router = express.Router()
 require("../models/Usuario")
 const User = mongoose.model("Usuario")
 const saltsRound = 11

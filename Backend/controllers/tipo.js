@@ -1,9 +1,7 @@
 const express = require("express")
-const { rmSync } = require("fs")
 const mongoose = require("mongoose")
 require("../models/Tipo")
 const Tipo = mongoose.model("tipo")
-const router = express.Router()
 
 const cadastro = (req, res) => {
     Tipo.findOne({ nome: req.body.nome }).then((tipo) => {
