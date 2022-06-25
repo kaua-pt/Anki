@@ -6,6 +6,7 @@ const User = mongoose.model("Usuario")
 const saltsRound = 11
 const bcrypt = require("bcrypt")
 
+
 router.get("/Registro", (req, res) => {
     res.send("Rota de registro")
 })
