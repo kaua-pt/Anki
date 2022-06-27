@@ -1,2 +1,2 @@
 # Anki
- A website like Anki using Typescript, Node and React
+ A website like Anki using Node and React
