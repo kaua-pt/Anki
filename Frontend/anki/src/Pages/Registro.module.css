@@ -1,4 +1,39 @@
-.teste {
-    color: #fff;
-    bottom: 500;
+.container {
+    width: 200px;
+    height: fit-content;
+    margin: auto;
+    background-color: #ebebeb;
+    padding: 20px 15px;
+    margin-top: 60px;
+    border-radius: 7px;
+    font-family: Roboto, sans-serif;
+    box-shadow: 10px 11px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.registerform {
+    padding: 5px;
+}
+
+.form_field {
+    display: inline-block;
+    padding: 5px;
+    margin-top: 20px;
+    transition: all 0.2s;
+    border-radius: 10px;
+    border-color: aliceblue;
+}
+
+.submit {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border-color: aliceblue;
+    padding: 5px;
+    margin-left: 50px;
 }

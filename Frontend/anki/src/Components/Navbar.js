@@ -5,6 +5,21 @@ import { useEffect, useState } from "react"
 export default function Navbar() {
 
     const [logged, setLogged] = useState(false)
+    const [user, setUser] = useState("")
+
+    useEffect(() => {
+        const usuário = localStorage.getItem("_userlog")
+        if (usuário) {
+            setLogged(true)
+            const usuariolog = JSON.parse(usuário)
+            setUser(usuariolog.data.nome)
+        }
+    }, [])
+
+    const sair = () => {
+        localStorage.removeItem("_userlog")
+        setLogged(false)
+    }
 
     return (
         <nav className={styles.navbar}>
@@ -12,10 +27,19 @@ export default function Navbar() {
             {logged ? (
                 <ul className={styles.list}>
 
-                    <li className={styles.item}>Usuario</li>
-                    <li className={styles.item}>Sair</li>
+                    <li className={styles.item}><Link to="/">Inicio</Link></li>
+
+                    <div>
+                        <li className={styles.item}>{user}</li>
+                    </div>
+                    <div>
+                        <li className={styles.item} onClick={sair}>Sair</li>
+                    </div>
+
                 </ul>
+
             ) : (
+
                 <ul className={styles.list}>
                     <li className={styles.item}><Link to="/">Inicio</Link></li>
 
@@ -26,7 +50,6 @@ export default function Navbar() {
                     <div className={styles.ret2}>
                         <li className={styles.itemlog2}><Link to="/login">Login</Link></li>
                     </div>
-
                 </ul>
             )
 

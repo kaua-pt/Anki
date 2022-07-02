@@ -37,7 +37,7 @@ const login = (req, res) => {
         if (emailFound) {
             bcrypt.compare(req.body.senha, emailFound.senha, (err, result) => {
                 if (result == true) {
-                    res.send("Logado")
+                    res.send(emailFound)
 
                 } else {
                     res.send("Senha Incorreta")

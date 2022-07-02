@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    width: 1440px;
+    width: 1365px;
     flex-wrap: wrap;
     background: #0D0C0C;
     border-bottom: .5px solid #ADADAD;
@@ -55,7 +55,7 @@
     position: absolute;
     width: 159px;
     height: 74px;
-    left: 15px;
+    left: 03px;
     top: 0px;
 
     font-family: 'Inter';
@@ -71,7 +71,7 @@
     position: absolute;
     width: 159px;
     height: 74px;
-    left: 33px;
+    left: 23px;
     top: 0px;
 
     font-family: 'Inter';
@@ -95,7 +95,7 @@
 
 .ret {
     position: absolute;
-    width: 140px;
+    width: 120px;
     height: 50px;
     left: 1150px;
     top: 25px;
@@ -109,9 +109,9 @@
 
 .ret2 {
     position: absolute;
-    width: 140px;
+    width: 120px;
     height: 50px;
-    left: 955px;
+    left: 1000px;
     top: 25px;
 
     background: #191970;
@@ -125,4 +125,15 @@
 
 .itemlog2 a:hover {
     text-decoration: none;
+}
+
+.ret a:hover {
+    background: #45459b;
+    border-radius: 30px;
+
+}
+
+.ret2 a:hover {
+    background: #45459b;
+    border-radius: 30px;
 }
